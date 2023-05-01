@@ -1,1 +1,14 @@
 # Add your third-party Python libraries here
+!pip install os
+!pip install requests
+!pip install re
+!pip install urllib
+!pip install bs4
+!pip install joblib
+!pip install numpy
+!pip install pandas
+!pip install geopandas
+!pip install pyarrow
+!pip install sqlalchemy
+!pip install sqlite3
+!pip install plotly
