@@ -1,7 +1,5 @@
--- Write your tables' schemas in this file
--- Create schema file
 
-CREATE TABLE daily_wealther (
+CREATE TABLE IF NOT EXISTS daily_wealther (
 	"STATION" BIGINT, 
 	"DATE" DATETIME, 
 	"LATITUDE" FLOAT, 
@@ -36,7 +34,7 @@ CREATE TABLE daily_wealther (
 
 
 
-CREATE TABLE hourly_wealther (
+CREATE TABLE IF NOT EXISTS hourly_wealther (
 	"STATION" BIGINT, 
 	"DATE" DATETIME, 
 	"LATITUDE" FLOAT, 
@@ -67,7 +65,7 @@ CREATE TABLE hourly_wealther (
 
 
 
-CREATE TABLE uber (
+CREATE TABLE IF NOT EXISTS uber (
 	"Unnamed: 0.1" BIGINT, 
 	"Unnamed: 0" BIGINT, 
 	"key" DATETIME, 
@@ -85,7 +83,7 @@ CREATE TABLE uber (
 
 
 
-CREATE TABLE yellow_taxi (
+CREATE TABLE IF NOT EXISTS yellow_taxi (
 	"Unnamed: 0" BIGINT, 
 	vendor_id TEXT, 
 	pickup_datetime DATETIME, 
@@ -104,3 +102,4 @@ CREATE TABLE yellow_taxi (
 	distance FLOAT
 )
 ;
+
