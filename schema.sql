@@ -1,7 +1,7 @@
 -- Write your tables' schemas in this file
-# Create schema file
-create_table = """
-CREATE TABLE IF NOT EXISTS daily_wealther (
+-- Create schema file
+
+CREATE TABLE daily_wealther (
 	"STATION" BIGINT, 
 	"DATE" DATETIME, 
 	"LATITUDE" FLOAT, 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS daily_wealther (
 
 
 
-CREATE TABLE IF NOT EXISTS hourly_wealther (
+CREATE TABLE hourly_wealther (
 	"STATION" BIGINT, 
 	"DATE" DATETIME, 
 	"LATITUDE" FLOAT, 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS hourly_wealther (
 
 
 
-CREATE TABLE IF NOT EXISTS uber (
+CREATE TABLE uber (
 	"Unnamed: 0.1" BIGINT, 
 	"Unnamed: 0" BIGINT, 
 	"key" DATETIME, 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS uber (
 
 
 
-CREATE TABLE IF NOT EXISTS yellow_taxi (
+CREATE TABLE yellow_taxi (
 	"Unnamed: 0" BIGINT, 
 	vendor_id TEXT, 
 	pickup_datetime DATETIME, 
@@ -104,8 +104,3 @@ CREATE TABLE IF NOT EXISTS yellow_taxi (
 	distance FLOAT
 )
 ;
-
-"""
-
-with open("schema.sql", "w") as schema_file:
-    schema_file.write(create_table)
